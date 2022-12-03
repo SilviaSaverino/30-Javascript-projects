@@ -46,6 +46,21 @@ section {
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /*will add an effect to let the hand goes back when ticking*/
 }
 
-.seconds-hand {
+.second-hand {
+    background-color: green;
+    border: 2px solid;
+}
 
+.minutes-hand {
+    background-color: purple;
+    border: 2px solid;
+    width: 44%;
+    left: 6%;
+}
+
+.hours-hand {
+    background-color: blue;
+    border: 2px solid;
+    width: 35%;
+    left: 15%;
 }

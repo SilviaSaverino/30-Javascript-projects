@@ -1,6 +1,13 @@
+#homepage {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
 html {
   font-size: 10px;
-  background: url(/assets/img/01DrumKit-background.jpg) bottom center;
+  background: url(/assets/img/day1-img/day1-01DrumKit-background.jpg) bottom center;
   background-size: cover;
 }
 

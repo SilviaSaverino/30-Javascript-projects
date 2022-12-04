@@ -14,3 +14,32 @@ body {
   input {
     width: 100px;
   }
+
+
+
+
+/*Variable syntax in CSS: To declare a variable in CSS: pick a name then append two hyphens (–) as the prefix. 
+*/
+
+ :root { /* The :root selector matches the document's root element*/
+    --base: #ffc600;    /*variable base defaulted to yellow*/
+    --spacing: 10px;      /*variable spacing defaulted to 10px ...*/
+    --blur: 10px;
+ } 
+
+
+/*we get the values directly from the variables previously declared ->img padding: 10px===var(--spacing).
+If we were to change the value of the variable, it will automatically update everything else in css*/
+
+ img {
+    padding: var(--spacing);  
+    background: var(--base);
+    filter: blur(var(--blur));
+ }
+
+ .hl {
+    color: var(--base);
+ }
+
+ /*what we want is to use javascript to update the CSS variables values automatically, when the user select a different color, 
+ or plays with the range etc. -> check html file script element*/

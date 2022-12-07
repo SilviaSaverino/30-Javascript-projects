@@ -13,6 +13,7 @@
     <header>
         <header>
             <a href="/index.html" id="homepage">HomePage</a>
+            <h2>Nothing to see in this page. Checkout the console.</h2>
         </header>
     </header>
 
@@ -106,7 +107,7 @@
     
         // 5. Sort the inventors by years lived
 
-      /*  const oldest = inventors.sort(function(a, b){
+        const oldest = inventors.sort(function(a, b){
             const lastGuy = a.passed - a.year;
             const nextGuy = b.passed - b.year;
 
@@ -117,32 +118,62 @@
             }
         });
 
-        console.table(oldest);*/
+        console.table(oldest);
 
         
        // SINGLE LINE CODE:
-        const oldest = inventors.sort(function(a, b){
+       /* const oldest = inventors.sort(function(a, b){
             const lastGuy = a.passed - a.year;
             const nextGuy = b.passed - b.year;
 
             return lastGuy > nextGuy ? -1 : 1; 
         
-        console.table(oldest);
+        console.table(oldest);*/
 
 
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+       /* const category = document.querySelector('.mw-category'); //we must find out where all of those names are contained
+        const links = [...category.querySelectorAll('a')]; //then we need to check the element to select, and in this case we must create an array and spread everything in it, CFR nodelist.
     
-    
+        const de = links
+            .map(link => link.textContent)
+            .filter(streetNae => streetName.includes('de'));*/
+
+
         // 7. sort Exercise
         // Sort the people alphabetically by last name
+
+        const alpha = people.sort((lastOne, nextOne) => {
+            //console.log(lastOne);
+            /*const parts = lastOne.split(','); //we want to create an arrays with name and Lname, we use the comma to indicate the separation
+             console.log(parts);*/
+            //but we can also put them into their variables instead -->
+          /*  const [last, first] = lastOne.split(',');
+            console.log(last, first); */
+            //so now we have some proper variables to work with
+            const [aLast, aFirst] = lastOne.split(',');
+            const [bLast, bFirst] = nextOne.split(',');
+
+            return aLast > bLast ? 1 : -1;      
+        }) 
+        console.log(alpha); 
     
         // 8. Reduce Exercise
         // Sum up the instances of each of these
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     
+        const transportation = data.reduce(function(obj, item){
+            if(!obj[item]){
+                obj[item] = 0;
+            }
+            obj[item]++;
+            return obj;
+        },{}); // we must start with an empty object {}
+        console.log(transportation);
+
       </script>
 
     </body>
     </html>
-    

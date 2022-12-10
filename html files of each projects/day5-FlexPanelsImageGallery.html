@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,3 +13,57 @@
             <a href="/index.html" id="homepage">HomePage</a>
         </header>
     </header>
+
+    <div class="panels">
+        <div class="panel panel1">
+            <p>Hey</p>
+            <p>Let's</p>
+            <p>Dance</p>
+        </div>
+        <div class="panel panel2">
+            <p>Give</p>
+            <p>Take</p>
+            <p>Receive</p>
+        </div>
+        <div class="panel panel3">
+            <p>Experience</p>
+            <p>It</p>
+            <p>Today</p>
+        </div>
+        <div class="panel panel4">
+            <p>Give</p>
+            <p>All</p>
+            <p>You can</p>
+        </div>
+        <div class="panel panel5">
+            <p>Life</p>
+            <p>In</p>
+            <p>Motion</p>
+        </div>
+    </div>
+
+    <script>
+        /*1# we have to select all the panels and add a class .panel*/
+        const panels = document.querySelectorAll('.panel');
+        /*2# we then have to create a function that will let the word zoom up by using the css open class*/
+        function toggleOpen() {
+            this.classList.toggle('open');
+        }
+
+        function toggleActive(e) {
+           /* console.log(e.propertyName); we need to understand what is getting transioned -> font size and flex of .panel.open*/
+            if (e.propertyName.includes('flex')) {
+                this.classList.toggle('open-active');
+            }
+        }
+
+
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+        /*#3 we have to listen for transitioned and add a function that toggle the active*/
+        panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+    </script>
+
+</body>
+
+</html>

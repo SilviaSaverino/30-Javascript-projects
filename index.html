@@ -5,31 +5,199 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30ish days challenge</title>
+    <link rel="stylesheet" href="/assets/css/index-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+    <title>30ish Days Challenge</title>
 </head>
 
 <body>
-    <h1>30ish days challenge</h1>
-    <div>
-        <ul>
-            <li>
-                <a href="/html files of each projects/day1-drumkit.html">day1-Drumkit project</a>
-            </li>
-            <li>
-                <a href="/html files of each projects/day2-clock.html">day2-Clock project</a>
-            </li>
-            <li>
-                <a href="/html files of each projects/day3-updateCSSvariable-with-JS.html">day3-Update CSS variable with JS</a>
-            </li>
-            <li>
-                <a href="/html files of each projects/day4-ArrayCardio.html">day4-Array Cardio</a>
-            </li>
-            <li>
-                <a href="/html files of each projects/day5-FlexPanelsImageGallery.html">day5-Flex Panels Image Gallery</a>
-            </li>
+    <header>
+        <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <h1 class="navbar-brand">30 Days 30 Project Challenge</h1>>
 
-        </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Project 1
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h5>Day 1: <a href="/html files of each projects/day1-drumkit.html" target="_blank">Drumkit Set</a></h5>
+                    <p>
+                        The aim of this project is to create a drum machine where each key pressed produces a
+                        corresponding drum sound.
+                        <br>
+                        It also incorporates CSS transitions and animations for an engaging
+                        user experience.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Project 2
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h5>Day 2: <a href="/html files of each projects/day2-clock.html" target="_blank">Clock</a></h5>
+                    <p>
+                        This project introduced me to the "data-key" attribute, which I had never seen before.
+                        <br>
+                        I've encountered the CSS transform and transition properties, which can be incredibly useful for
+                        creating dynamic and exciting visuals.
+                        <br>
+                        I found it fascinating that the CSS selector[attribute] method could be used to select it. This
+                        was my first experience with this technique.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Project 3
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h5>Day 3: <a href="/html files of each projects/day3-updateCSSvariable-with-JS.html" target="_blank">Update CSS
+                            variable with JS</a></h5>
+                    <p>
+                        This project let you update CSS variables with JavaScript. It allows you to keep your CSS variables in sync with the values of your JavaScript variables. 
+                        <br>
+                        With this project, you can easily update the values of your CSS variables, and have those updates automatically reflected in your HTML and CSS code. 
+                        <br>
+                        This can be useful when you need to change the look and feel of your website quickly and easily.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Project 4
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h5>Day 4: <a href="/html files of each projects/day4-ArrayCardio.html" target="_blank">Array Cardio</a></h5>
+                    <p>
+                        Explore exciting ways to interact with JavaScript arrays! 
+                        <br>
+                        From mapping and sorting to reducing and filtering, these exercises will give you a comprehensive 
+                        understanding of how to work with arrays.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Project 5
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h5>Day 5: <a href="/html files of each projects/day5-FlexPanelsImageGallery.html" target="_blank">Flex Panels Image
+                        Gallery</a></h5>
+                    <p>
+                        Learn how to create dynamic panels and toggle them using CSS and JavaScript! 
+                        <br>
+                        With a few lines of code, you can create an interactive experience that allows users to toggle between panels with a click
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Project 6
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h5>Day 6: <a href="/html files of each projects/day3-updateCSSvariable-with-JS.html">Update CSS
+                            variable with JS</a></h5>
+                    <p>
+                        Insert Description here
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <p>I'm really excited to dive into Javascript and learn all the new concepts and techniques!<br> I'm confident that with consistent practice and dedication I can become an expert in no time. 
+                Here's to unlocking the amazing potential of Javascript and CSS</small>
+            </p>
+            <h5>Disclaimer:</h5>
+            <p>
+               I completed the 30-day Vanilla JS Coding Challenge by following the instructions of Wes Bros, using his existing code as the foundation for my project.
+               <br>Follow this <a href="https://courses.wesbos.com/account" target="_blank">link</a> to check it out!
+            </p>
+        </div>     
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>

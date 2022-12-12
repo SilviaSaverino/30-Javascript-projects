@@ -1,0 +1,15 @@
+h1 {
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+
+.accordion {
+    margin-top: 50px;
+    padding: 30px;
+}
+
+footer p {
+   color: #fafafa;
+}

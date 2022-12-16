@@ -11,9 +11,7 @@
 
 <body>
     <header>
-        <header>
-            <a href="/index.html" id="homepage">HomePage</a>
-        </header>
+        <a href="/index.html" id="homepage">HomePage</a>
     </header>
     <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
 
@@ -36,13 +34,14 @@
         const inputs = document.querySelectorAll('.controls input');
 
         function handleUpdate() {
-            const suffix = this.dataset.sizing || ''; /*dataset will log an array with all of the objects containing the suffix data- (data- see note from previous project)*/
+            const suffix = this.dataset.sizing ||
+            ''; /*dataset will log an array with all of the objects containing the suffix data- (data- see note from previous project)*/
             /*#3 update the css variable now*/
             document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
         }
         /*#2 listen to a change event on each of the inputs*/
         inputs.forEach(input => input.addEventListener('change', handleUpdate));
-        inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));      
+        inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
     </script>
 
 </body>

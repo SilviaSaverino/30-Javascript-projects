@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,7 @@
 
 <body>
     <header>
-        <header>
-            <a href="/index.html" id="homepage">HomePage</a>
-        </header>
+        <a href="/index.html" id="homepage">HomePage</a>
     </header>
 
     <div class="panels">
@@ -51,7 +50,7 @@
         }
 
         function toggleActive(e) {
-           /* console.log(e.propertyName); we need to understand what is getting transioned -> font size and flex of .panel.open*/
+            /* console.log(e.propertyName); we need to understand what is getting transioned -> font size and flex of .panel.open*/
             if (e.propertyName.includes('flex')) {
                 this.classList.toggle('open-active');
             }
@@ -61,7 +60,6 @@
         panels.forEach(panel => panel.addEventListener('click', toggleOpen));
         /*#3 we have to listen for transitioned and add a function that toggle the active*/
         panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
-
     </script>
 
 </body>

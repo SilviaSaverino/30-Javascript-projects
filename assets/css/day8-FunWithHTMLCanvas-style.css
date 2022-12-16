@@ -5,3 +5,14 @@ html, body {
 canvas {
     background-color: blue;
 }
+
+header {
+    background-color: pink;
+    height: 75px;
+    border: 2px solid black;
+}
+
+a, h2 {
+    display: flex;
+    justify-content: center;
+}

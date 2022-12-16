@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/day8-FunWithHTMLCanvas-style.css">
     <title>Fun with HTML canvas</title>
 </head>
 
@@ -13,6 +14,66 @@
     <header>
         <a href="/index.html" id="homepage">HomePage</a>
     </header>
+
+    <canvas id="draw" width="800" height="800"></canvas>
+
+    <script>
+        const canvas = document.querySelector('#draw');
+
+        //context is where you draw on...must be 2d or 3d
+        const ctx = canvas.getContext('2d');
+
+        //make the canvas as bis as the window space - 800x800 is the default measure
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        //defines the stroke color; linejoin = when two lines join; and linecap = the end of the line.
+        ctx.strokeStyle = '#BADA55';
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+
+        //let us draw only when the cursor is down/clicked and dragged
+        let isDrawing = false;
+
+        //we need a starting point for the line X, and an ending point of the line Y
+        let lastX = 0;
+        let lastY = 0;
+
+        function draw(e) {
+            if (!isDrawing) return //stop the function from running when it is not moused down
+            console.log(e);
+
+            ctx.beginPath(); //will start with an X and a Y position
+            //start from -> in this case from 0, so we must update this values to actually start from where the cursor is. See #2
+            ctx.moveTo(lastX, lastY);
+            //goes to
+            ctx.lineTo(e.offsetX, e.offsetY); //we take this values from the console
+            ctx.stroke();
+
+            /*#2 - see 'start from' comment (line 47) -> we must update the value of this variables
+            lastX = e.offsetX; 
+            lastY = e.offsetY;
+            WE CAN WRITE THE ABOVE ON A SINGLE LINE with a destructuring array:*/
+            [lastX, lastY] = [e.offsetX, e.offsetY]; 
+
+            
+        }
+
+        canvas.addEventListener('mousemove', draw); //if you console.log(e) will display all the mouse movements on the canvas
+
+        //to specify when we want to draw and when we do not want to
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+        canvas.addEventListener('mouseout', () => isDrawing = false);
+
+ //     canvas.addEventListener('mousedown', () => isDrawing = true); 
+        /* leaving the above like this, will give us some issues when drawing -> no matter where your
+        pointer is the first draw will always be connected with point 0; also, when you mouseup and then draw again
+        the two points of those lines (the last point from the previous line & the first of the latest line)
+        get joined together-he basically let you draw one continues line... 
+        So we must update the lastx and lasty inside this function*/
+        
+        
+    </script>
 
 
 </body>

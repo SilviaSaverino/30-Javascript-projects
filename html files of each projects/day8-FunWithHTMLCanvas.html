@@ -71,6 +71,12 @@
         the two points of those lines (the last point from the previous line & the first of the latest line)
         get joined together-he basically let you draw one continues line... 
         So we must update the lastx and lasty inside this function*/
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            [lastX, lastY] = [e.offsetX, e.offsetY]; 
+
+
+        }); 
         
         
     </script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Tools Tricks</title>
+    <link rel="stylesheet" href="/assets/css/day9-DevToolsDomination-style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="/index.html" id="homepage">HomePage</a>
+    </header>
+    <h2>Nothing to see here! Check the console</h2>
+    <!-- To understand which js code is being applied you can inspect the element -> Reselect the el on the dev window
+    -> select Break on 
+    -> select Attribute Modification -> it shows you which js code makes whatever once fired! -->
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+        const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    
+        function makeGreen() {
+          const p = document.querySelector('p');
+          p.style.color = '#BADA55';
+          p.style.fontSize = '50px';
+        }
+
+        // Regular
+        console.log('hello');
+        
+        // Interpolated - add whatever you want to the message by using %s instead of backticks and ${}
+        console.log('Hello I am a %s string', 'THIS GETS INTERPOLATED WHERE THE %s is');
+    
+        // Styled - applies style to the whole message using the prefix %c
+        console.log( '%c I am a great text', 'font-size:20px; background:blue;');
+    
+        // warning! -
+        console.warn('This triangle is the warning sign');
+
+        // Error :|
+        console.error('This esclamation mark inside a circle is the error sign');
+
+        // Info
+        console.info("Elephants can't jump");
+    
+        // Testing - you can use this to check if something is true. If it is not, the second argument 'That is wrong' will be logged
+        console.assert(1===1, 'That is wrong');
+        console.assert(1===5, 'That is false, and you can read it');
+
+        /*you could use this with actual code you want to test of course*/
+        const p = document.querySelector('p');
+
+        console.assert(p.classList.contains('hola'), 'Not true!');
+
+        // clearing - this will just clear the console
+        console.clear();
+    
+        // Viewing DOM Elements
+        console.log(p); //this will just log the element and its content
+        console.dir(p); //will create a dropdown menu where you can see all of the properties of the element chosen
+    
+        // Grouping together -
+        dogs.forEach(dog => {
+            console.log(`This is ${dog.name}`);
+            console.log(` ${dog.name} is ${dog.age} years old`);
+            console.log(`${dog.name} is a puppy`);
+        });
+
+        /*If we had more informations to log, it is better to use the below: */
+        dogs.forEach(dog => {
+            console.groupCollapsed(`${dog.name}`);  // create a console group by their name, or else
+            console.log(`This is ${dog.name}`);
+            console.log(` ${dog.name} is ${dog.age} years old`);
+            console.log(`${dog.name} is a puppy`);
+            console.groupEnd(`${dog.name}`); // end the console group, by passing it the same argument of when created
+        });
+    
+        // counting - will count how many times you use something - obj,words,etc...
+        console.count('Silvia');
+        console.count('ciao');
+        console.count('ciao');
+        console.count('ciao');
+        console.count('Silvia');
+        console.count('Silvia');
+        console.count('ciao');
+        console.count('ciao');
+    
+        // timing - to check how long something takes
+        console.time('fetching data'); //add console time and pass it what you want to check
+        fetch('https://api.github.com/users/wesbos')
+          .then(data => data.json())
+          .then(data => {
+            console.timeEnd('fetching data'); //end the console time by using the same string used when created
+            console.log(data);
+          });
+    
+        console.table(dogs);
+      </script>

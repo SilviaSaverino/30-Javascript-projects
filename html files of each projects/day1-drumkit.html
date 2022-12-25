@@ -5,65 +5,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/index-style.css">
     <link rel="stylesheet" href="/assets/css/day1-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
     <script></script>
     <title>Drumkit</title>
 </head>
 
 <body>
     <header>
-        <a href="/index.html" id="homepage">HomePage</a>
+        <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <h1 class="navbar-brand">30 Days 30 Projects Challenge</h1>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+               </ul>
+            </div>
+        </nav>
     </header>
-    <div class="keys">
-        <div data-key="65" class="key">
-            <kbd>A</kbd>
-            <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-            <kbd>S</kbd>
-            <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-            <kbd>D</kbd>
-            <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-            <kbd>F</kbd>
-            <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-            <kbd>G</kbd>
-            <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-            <kbd>H</kbd>
-            <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-            <kbd>J</kbd>
-            <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-            <kbd>K</kbd>
-            <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-            <kbd>L</kbd>
-            <span class="sound">tink</span>
-        </div>
-    </div>
 
+    <section>
+        <div class="keys">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <span class="sound">clap</span>
+            </div>
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="sound">hihat</span>
+            </div>
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+                <span class="sound">kick</span>
+            </div>
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="sound">openhat</span>
+            </div>
+            <div data-key="71" class="key">
+                <kbd>G</kbd>
+                <span class="sound">boom</span>
+            </div>
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+                <span class="sound">ride</span>
+            </div>
+            <div data-key="74" class="key">
+                <kbd>J</kbd>
+                <span class="sound">snare</span>
+            </div>
+            <div data-key="75" class="key">
+                <kbd>K</kbd>
+                <span class="sound">tom</span>
+            </div>
+            <div data-key="76" class="key">
+                <kbd>L</kbd>
+                <span class="sound">tink</span>
+            </div>
+        </div>
+    
+    
+        <!-- the data- let you name an element whatever you want; data-key is not a real element -->
+        <audio data-key="65" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_clap.wav"></audio>
+        <audio data-key="83" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_hihat.wav"></audio>
+        <audio data-key="68" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_kick.wav"></audio>
+        <audio data-key="70" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_openhat.wav"></audio>
+        <audio data-key="71" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_boom.wav"></audio>
+        <audio data-key="72" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_ride.wav"></audio>
+        <audio data-key="74" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_snare.wav"></audio>
+        <audio data-key="75" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_tom.wav"></audio>
+        <audio data-key="76" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_tink.wav"></audio>
+    </section>
+    
 
-    <!-- the data- let you name an element whatever you want; data-key is not a real element -->
-    <audio data-key="65" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_clap.wav"></audio>
-    <audio data-key="83" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_hihat.wav"></audio>
-    <audio data-key="68" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_kick.wav"></audio>
-    <audio data-key="70" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_openhat.wav"></audio>
-    <audio data-key="71" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_boom.wav"></audio>
-    <audio data-key="72" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_ride.wav"></audio>
-    <audio data-key="74" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_snare.wav"></audio>
-    <audio data-key="75" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_tom.wav"></audio>
-    <audio data-key="76" src="/sounds/day1-audio/01 - JavaScript Drum Kit_sounds_tink.wav"></audio>
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <p>I'm really excited to dive into Javascript and learn all the new concepts and techniques!<br> I'm confident that with consistent practice and dedication I can become an expert in no time. 
+                Here's to unlocking the amazing potential of Javascript and CSS</small>
+            </p>
+            <h5>Disclaimer:</h5>
+            <p>
+               I completed the 30-day Vanilla JS Coding Challenge by following the instructions of Wes Bros, using his existing code as the foundation for my project.
+               <br>Follow this <a href="https://courses.wesbos.com/account" target="_blank">link</a> to check it out!
+            </p>
+        </div>     
+    </footer>
 
 </body>
 <script>

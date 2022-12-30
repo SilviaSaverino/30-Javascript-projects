@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Key Detection</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html" id="homepage">HomePage</a>
+        <h2>Nothing to see in this page. Until the secret code will be typed!</h2>
+        <p>Check the script or the console or go ahead and type
+            <h3>cosimocat</h3>
+            to see what happens.
+        </p>
+    </header>
+
+    <script>
+        const pressed = []; // creating an empty array to store the keys inputs in it.
+        const secretCode = 'cosimocat'
+        window.addEventListener('keyup', (e) => {
+            console.log(e.key);
+            pressed.push(e.key);
+            /* the below code will push everything else typed after the secretcode out of the array
+            allowing a max of 9character at a time into the pressed array */
+            pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+            console.log(pressed);
+            //must check if the array contains the secretcode. .join('') will turn it into a string
+            if (pressed.join('').includes(secretCode)) {
+                console.log("THE SECRET CODE HAD BEEN USED!");
+                cornify_add
+            (); //ahah this will add something random to the window, whenever the secret code will be typed
+            }
+        })
+    </script>
+</body>
+
+</html>
